@@ -24,11 +24,15 @@ export const getNumberWords = (text: string): number => {
 };
 
 export const getNumberCharacters = (text: string): number => {
-  const charactersNumber = text.split("");
+  const characters = text.split("");
 
-  if (text === "" || text === " ") {
+  if (characters.at(-1) === "") {
+    characters.splice(-1, 1);
+  }
+
+  if (text === "" || text === `\n`) {
     return 0;
   }
 
-  return charactersNumber.length;
+  return characters.length;
 };

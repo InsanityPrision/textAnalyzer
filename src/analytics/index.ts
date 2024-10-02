@@ -8,3 +8,11 @@ export const getNumberParagraphs = (text: string): number => {
   }
   return paragraphsNumber.length;
 };
+
+export const getNumberWords = (text: string): number => {
+  const words = text.split(" ");
+  if (text === "" || text === " ") {
+    return 0;
+  }
+  return words.length;
+};

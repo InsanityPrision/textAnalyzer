@@ -22,3 +22,13 @@ export const getNumberWords = (text: string): number => {
 
   return words.length;
 };
+
+export const getNumberCharacters = (text: string): number => {
+  const charactersNumber = text.split("");
+
+  if (text === "" || text === " ") {
+    return 0;
+  }
+
+  return charactersNumber.length;
+};

@@ -11,8 +11,14 @@ export const getNumberParagraphs = (text: string): number => {
 
 export const getNumberWords = (text: string): number => {
   const words = text.split(" ");
+
+  if (words.at(-1) === "") {
+    words.splice(-1, 1);
+  }
+
   if (text === "" || text === " ") {
     return 0;
   }
+
   return words.length;
 };

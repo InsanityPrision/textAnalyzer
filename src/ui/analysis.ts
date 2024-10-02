@@ -124,6 +124,9 @@ export const analyzeText = (text: string): void => {
   listenForbiddenWordsChanges(text);
 
   // Implement the rest of the analysis here
-  renderParagraphsTotal(getNumberParagraphs(text));
-  renderWordsTotal(getNumberWords(text));
+  const paragraphsTotal = getNumberParagraphs(text);
+  const wordsTotal = getNumberWords(text);
+
+  renderParagraphsTotal(paragraphsTotal);
+  renderWordsTotal(wordsTotal);
 };

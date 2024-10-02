@@ -1,12 +1,15 @@
 export const getNumberParagraphs = (text: string): number => {
-  const paragraphsNumber = text.split("\n");
+  const paragraphs = text.split("\n");
+
   if (text === "") {
     return 0;
   }
-  if (paragraphsNumber.length === 1) {
+
+  if (paragraphs.length === 1) {
     return 1;
   }
-  return paragraphsNumber.length;
+
+  return paragraphs.length;
 };
 
 export const getNumberWords = (text: string): number => {

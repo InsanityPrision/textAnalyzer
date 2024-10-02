@@ -39,3 +39,26 @@ export const getNumberCharacters = (text: string): number => {
 
   return characters.length;
 };
+
+export const getShortWordsNumber = (text: string, length: number): number => {
+  const words = text.split(" ");
+  let shortWords: string[] = [];
+
+  if (text === "" || text === "\n" || text === " ") {
+    return 0;
+  }
+
+  const reducedWords = words.reduce((shortWord, word) => {
+    if (word.length <= length) {
+      shortWord = word;
+      debugger;
+      shortWords.push(shortWord);
+      return shortWord;
+    }
+    return "";
+  });
+
+  shortWords.push(reducedWords);
+
+  return shortWords.length;
+};

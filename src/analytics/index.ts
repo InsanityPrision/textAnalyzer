@@ -45,3 +45,13 @@ export const getShortWordsNumberTotal = (text: string, length = 4): number => {
 
   return reducedWords.length;
 };
+
+export const getWordsList = (words: string[]): string => {
+  if (words.length === 0) {
+    return "";
+  }
+
+  const joinedWords = words.join(",");
+  debugger;
+  return joinedWords;
+};

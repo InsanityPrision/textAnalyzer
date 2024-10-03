@@ -1,7 +1,7 @@
 export const getNumberParagraphsTotal = (text: string): number => {
   const paragraphs = text.split("\n\n");
 
-  if (text === "") {
+  if (text.length === 0) {
     return 0;
   }
 

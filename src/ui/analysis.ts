@@ -4,6 +4,7 @@ import { getNumberCharactersTotal } from "../analytics/index.js";
 import { getShortWordsNumberTotal } from "../analytics/index.js";
 import { getShortWordsList } from "../analytics/index.js";
 import { getShortWords } from "../analytics/index.js";
+import { getPalindromeList } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
 const shortWordsContainer = document.querySelector(".short");
@@ -134,10 +135,12 @@ export const analyzeText = (text: string): void => {
   const showShortWordsTotal = getShortWordsNumberTotal(text);
   const shortWords = getShortWords(text);
   const showWordsList = getShortWordsList(shortWords);
+  const showPalindromeList = getPalindromeList(text).join(", ");
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
   renderCharactersTotal(charactersTotal);
   renderShortWordsTotal(showShortWordsTotal);
-  renderShortWordsList(getShortWordsList(shortWords));
+  renderShortWordsList(showWordsList);
+  renderPalindromes(showPalindromeList);
 };

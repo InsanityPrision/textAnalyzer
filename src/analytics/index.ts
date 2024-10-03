@@ -8,16 +8,14 @@ export const getNumberParagraphsTotal = (text: string): number => {
   return paragraphs.length;
 };
 
-export const getNumberWords = (text: string): number => {
-  const words = text.split(" ");
-
-  if (words.at(-1) === "") {
-    words.splice(-1, 1);
-  }
-
-  if (text === "" || text === " ") {
+export const getNumberWordstotal = (text: string): number => {
+  if (text.length === 0) {
     return 0;
   }
+
+  text.trim();
+
+  const words = text.split(" ");
 
   return words.length;
 };

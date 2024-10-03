@@ -1,3 +1,6 @@
+import test from "node:test";
+import { text } from "stream/consumers";
+
 export const getNumberParagraphsTotal = (text: string): number => {
   const paragraphs = text.split("\n\n");
 
@@ -69,4 +72,18 @@ export const getShortWordsList = (words: string[]): string => {
   const joinedWords = words.join(", ");
   debugger;
   return joinedWords;
+};
+
+export const getPalindromeList = (text: string): string[] => {
+  if (text.length === 0) {
+    return [];
+  }
+
+  const textSplited = text.split(" ");
+  const reversedWords = textSplited.reverse();
+  const palindrome = reversedWords.filter(
+    (word) => word === word.split("").reverse().join("")
+  );
+  debugger;
+  return palindrome;
 };

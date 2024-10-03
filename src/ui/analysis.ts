@@ -1,6 +1,7 @@
 import { getNumberParagraphsTotal } from "../analytics/index.js";
 import { getNumberWordstotal } from "../analytics/index.js";
 import { getNumberCharactersTotal } from "../analytics/index.js";
+import { getShortWordsNumberTotal } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
 const shortWordsContainer = document.querySelector(".short");
@@ -128,8 +129,10 @@ export const analyzeText = (text: string): void => {
   const paragraphsTotal = getNumberParagraphsTotal(text);
   const wordsTotal = getNumberWordstotal(text);
   const charactersTotal = getNumberCharactersTotal(text);
+  const showShortWordsTotal = getShortWordsNumberTotal(text);
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
   renderCharactersTotal(charactersTotal);
+  renderShortWordsTotal(showShortWordsTotal);
 };

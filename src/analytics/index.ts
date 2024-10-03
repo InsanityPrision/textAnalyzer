@@ -46,12 +46,27 @@ export const getShortWordsNumberTotal = (text: string, length = 4): number => {
   return reducedWords.length;
 };
 
-export const getWordsList = (words: string[]): string => {
+export const getShortWords = (text: string, length = 4): string[] => {
+  text.trim();
+
+  if (text.length === 0) {
+    return [];
+  }
+
+  const words = text.split(/\s/);
+  const reducedWords = words.filter(
+    (word) => word.length <= length && word.length > 0
+  );
+
+  return reducedWords;
+};
+
+export const getShortWordsList = (words: string[]): string => {
   if (words.length === 0) {
     return "";
   }
 
-  const joinedWords = words.join(",");
+  const joinedWords = words.join(", ");
   debugger;
   return joinedWords;
 };

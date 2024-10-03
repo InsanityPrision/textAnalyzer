@@ -1,4 +1,4 @@
-import { getNumberParagraphs } from "../analytics/index.js";
+import { getNumberParagraphsTotal } from "../analytics/index.js";
 import { getNumberWords } from "../analytics/index.js";
 import { getNumberCharacters } from "../analytics/index.js";
 
@@ -125,7 +125,7 @@ export const analyzeText = (text: string): void => {
   listenForbiddenWordsChanges(text);
 
   // Implement the rest of the analysis here
-  const paragraphsTotal = getNumberParagraphs(text);
+  const paragraphsTotal = getNumberParagraphsTotal(text);
   const wordsTotal = getNumberWords(text);
   const charactersTotal = getNumberCharacters(text);
 

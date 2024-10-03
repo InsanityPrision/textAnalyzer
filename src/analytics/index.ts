@@ -20,16 +20,14 @@ export const getNumberWordstotal = (text: string): number => {
   return words.length;
 };
 
-export const getNumberCharacters = (text: string): number => {
-  const characters = text.split("");
-
-  if (characters.at(-1) === "") {
-    characters.splice(-1, 1);
-  }
-
-  if (text === "" || text === `\n`) {
+export const getNumberCharactersTotal = (text: string): number => {
+  if (text.length === 0) {
     return 0;
   }
+
+  text.trim();
+
+  const characters = text.split("");
 
   return characters.length;
 };

@@ -40,25 +40,17 @@ export const getNumberCharacters = (text: string): number => {
   return characters.length;
 };
 
-export const getShortWordsNumber = (text: string, length: number): number => {
-  const words = text.split(" ");
-  let shortWords: string[] = [];
+export const getShortWordsNumber = (text: string, length = 4): number => {
+  text.trim();
 
-  if (text === "" || text === "\n" || text === " ") {
+  if (text.length === 0) {
     return 0;
   }
 
-  const reducedWords = words.reduce((shortWord, word) => {
-    if (word.length <= length) {
-      shortWord = word;
-      debugger;
-      shortWords.push(shortWord);
-      return shortWord;
-    }
-    return "";
-  });
+  const words = text.split(/\s/);
+  const reducedWords = words.filter(
+    (word) => word.length <= length && word.length > 0
+  );
 
-  shortWords.push(reducedWords);
-
-  return shortWords.length;
+  return reducedWords.length;
 };

@@ -1,6 +1,6 @@
-import { getNumberParagraphs } from "../index.js";
+import { getNumberParagraphsTotal } from "../index.js";
 
-let test = getNumberParagraphs(`Hola 
+let test = getNumberParagraphsTotal(`Hola 
   buenas 
   tardes 
   que tal estas?`);

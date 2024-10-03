@@ -1,46 +1,38 @@
-export const getNumberParagraphs = (text: string): number => {
-  const paragraphs = text.split("\n");
+export const getNumberParagraphsTotal = (text: string): number => {
+  const paragraphs = text.split("\n\n");
 
-  if (text === "") {
+  if (text.length === 0) {
     return 0;
-  }
-
-  if (paragraphs.length === 1) {
-    return 1;
   }
 
   return paragraphs.length;
 };
 
-export const getNumberWords = (text: string): number => {
-  const words = text.split(" ");
-
-  if (words.at(-1) === "") {
-    words.splice(-1, 1);
-  }
-
-  if (text === "" || text === " ") {
+export const getNumberWordstotal = (text: string): number => {
+  if (text.length === 0) {
     return 0;
   }
+
+  text.trim();
+
+  const words = text.split(" ");
 
   return words.length;
 };
 
-export const getNumberCharacters = (text: string): number => {
-  const characters = text.split("");
-
-  if (characters.at(-1) === "") {
-    characters.splice(-1, 1);
-  }
-
-  if (text === "" || text === `\n`) {
+export const getNumberCharactersTotal = (text: string): number => {
+  if (text.length === 0) {
     return 0;
   }
+
+  text.trim();
+
+  const characters = text.split("");
 
   return characters.length;
 };
 
-export const getShortWordsNumber = (text: string, length = 4): number => {
+export const getShortWordsNumberTotal = (text: string, length = 4): number => {
   text.trim();
 
   if (text.length === 0) {

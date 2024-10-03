@@ -1,6 +1,7 @@
 import { getNumberWordstotal } from "../index.js";
 
-let wordsNumber = getNumberWordstotal("Hola que tal estas yo me llamo Erik");
+let wordsNumber = getNumberWordstotal(`Hola 
+  me llamo erik`);
 let expectedWords = 8;
 
 if (wordsNumber === expectedWords) {

@@ -13,9 +13,8 @@ export const getNumberWordstotal = (text: string): number => {
     return 0;
   }
 
-  text.trim();
-
-  const words = text.split(" ");
+  const textSplited = text.trim().split(/\s/);
+  const words = textSplited.filter((word) => word.length > 0);
 
   return words.length;
 };

@@ -1,9 +1,16 @@
-export const getNumberParagraphsTotal = (text: string): number => {
-  const paragraphs = text.split("\n\n");
-
+const isTextEmpty = (text: string): boolean => {
   if (text.length === 0) {
+    return true;
+  }
+  return false;
+};
+
+export const getNumberParagraphsTotal = (text: string): number => {
+  if (isTextEmpty(text)) {
     return 0;
   }
+
+  const paragraphs = text.split("\n\n");
 
   return paragraphs.length;
 };

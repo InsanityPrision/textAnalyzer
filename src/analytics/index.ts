@@ -5,7 +5,7 @@ const isTextEmpty = (text: string): boolean => {
   return false;
 };
 
-export const getNumberParagraphsTotal = (text: string): number => {
+export const getParagraphsTotal = (text: string): number => {
   if (isTextEmpty(text)) {
     return 0;
   }

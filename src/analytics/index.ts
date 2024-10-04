@@ -93,10 +93,12 @@ export const getWordFrequencyTotal = (
     return 0;
   }
 
-  const words = text.split(/\s/);
-  const wordFrequencyTotal = words.filter(
-    (word) => wantedWordFrequency === word
-  ).length;
-
-  return wordFrequencyTotal;
+  const words = text.split(/\s+/g);
+  const wordsFrequency = words.filter(
+    (word) =>
+      word.toLowerCase().replace(/[,;:.]/, "") ===
+      wantedWordFrequency.toLowerCase().replace(/[,;:.]/, "")
+  );
+  debugger;
+  return wordsFrequency.length;
 };

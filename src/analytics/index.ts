@@ -1,6 +1,3 @@
-import test from "node:test";
-import { text } from "stream/consumers";
-
 export const getNumberParagraphsTotal = (text: string): number => {
   const paragraphs = text.split("\n\n");
 
@@ -86,4 +83,22 @@ export const getPalindromeList = (text: string): string[] => {
   );
   debugger;
   return palindrome;
+};
+
+export const getWordFrequencyTotal = (
+  text: string,
+  wantedWordFrequency: string
+): number => {
+  if (text.length === 0) {
+    return 0;
+  }
+
+  const words = text.split(/\s+/g);
+  const wordsFrequency = words.filter(
+    (word) =>
+      word.toLowerCase().replace(/[,;:.]/, "") ===
+      wantedWordFrequency.toLowerCase().replace(/[,;:.]/, "")
+  );
+  debugger;
+  return wordsFrequency.length;
 };

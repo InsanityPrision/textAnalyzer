@@ -54,7 +54,7 @@ export const getShortWordsTotal = (text: string, length = 4): number => {
 };
 
 export const getShortWords = (text: string, length = 4): string[] => {
-  if (text.length === 0) {
+  if (isTextEmpty(text)) {
     return [];
   }
 

@@ -77,16 +77,17 @@ export const getShortWordsList = (words: string[]): string => {
 };
 
 export const getPalindromeList = (text: string): string[] => {
-  if (text.length === 0) {
+  if (isTextEmpty(text)) {
     return [];
   }
 
-  const textSplited = text.split(" ");
-  const reversedWords = textSplited.reverse();
-  const palindrome = reversedWords.filter(
-    (word) => word === word.split("").reverse().join("") && word.length > 2
-  );
-  debugger;
+  const words = getWords(text);
+  const palindrome = words
+    .reverse()
+    .filter(
+      (word) => word === word.split("").reverse().join("") && word.length > 2
+    );
+
   return palindrome;
 };
 

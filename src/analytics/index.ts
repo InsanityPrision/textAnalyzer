@@ -154,3 +154,19 @@ export const hideForbiddenWords = (
 
   return hideForbiddenWords;
 };
+
+export const trasformToCamelCase = (text: string): string => {
+  if (isTextEmpty(text)) {
+    return "";
+  }
+
+  const textInCamelCase = getWords(text)
+    .map((word) => {
+      const capitalLetter = word.charAt(0).toUpperCase();
+
+      return capitalLetter + word.slice(1);
+    })
+    .join("");
+
+  return textInCamelCase;
+};

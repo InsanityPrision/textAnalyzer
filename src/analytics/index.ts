@@ -15,7 +15,7 @@ export const getParagraphsTotal = (text: string): number => {
   return paragraphs.length;
 };
 
-export const getNumberWordstotal = (text: string): number => {
+export const getWordstotal = (text: string): number => {
   if (text.length === 0) {
     return 0;
   }

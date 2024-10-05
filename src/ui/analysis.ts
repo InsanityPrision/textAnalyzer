@@ -12,6 +12,7 @@ import {
   hideForbiddenWords,
   trasformToCamelCase,
   trasformToKebabCase,
+  transformToSnakeCase,
 } from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
@@ -150,6 +151,7 @@ export const analyzeText = (text: string): void => {
   const showReversedText = getReversedText(text);
   const showTextInCamelCase = trasformToCamelCase(text);
   const showTextInKebabCase = trasformToKebabCase(text);
+  const showTextInSnakeCase = transformToSnakeCase(text);
 
   renderParagraphsTotal(paragraphsTotal);
   renderWordsTotal(wordsTotal);
@@ -161,4 +163,5 @@ export const analyzeText = (text: string): void => {
   renderReversedText(showReversedText);
   renderCamelCase(showTextInCamelCase);
   renderKebabCase(showTextInKebabCase);
+  renderSnakeCase(showTextInSnakeCase);
 };

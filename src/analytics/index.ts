@@ -59,11 +59,11 @@ export const getShortWords = (text: string, length = 4): string[] => {
   }
 
   const words = getWords(text);
-  const reducedWords = words.filter(
+  const shortWords = words.filter(
     (word) => word.length <= length && word.length > 0
   );
 
-  return reducedWords;
+  return shortWords;
 };
 
 export const getShortWordsList = (words: string[]): string => {

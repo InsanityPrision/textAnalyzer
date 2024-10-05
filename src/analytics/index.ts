@@ -5,6 +5,11 @@ const isTextEmpty = (text: string): boolean => {
   return false;
 };
 
+const getWords = (text: string): string[] => {
+  const words = text.trim().split(/\s/);
+  return words;
+};
+
 export const getParagraphsTotal = (text: string): number => {
   if (isTextEmpty(text)) {
     return 0;
@@ -15,13 +20,12 @@ export const getParagraphsTotal = (text: string): number => {
   return paragraphs.length;
 };
 
-export const getWordstotal = (text: string): number => {
-  if (text.length === 0) {
+export const getWordsTotal = (text: string): number => {
+  if (isTextEmpty(text)) {
     return 0;
   }
 
-  const textSplited = text.trim().split(/\s/);
-  const words = textSplited.filter((word) => word.length > 0);
+  const words = getWords(text).filter((word) => word.length > 0);
 
   return words.length;
 };

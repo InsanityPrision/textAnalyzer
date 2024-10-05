@@ -1,6 +1,6 @@
-import { getWordstotal } from "../index.js";
+import { getWordsTotal } from "../index.js";
 
-let wordsNumber = getWordstotal(`Hola 
+let wordsNumber = getWordsTotal(`Hola 
   me llamo erik`);
 let expectedWords = 8;
 

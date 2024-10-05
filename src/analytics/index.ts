@@ -82,10 +82,11 @@ export const getPalindromeList = (text: string): string[] => {
   }
 
   const words = text.split(" ");
-  const reversedWords = words.reverse();
-  const palindrome = reversedWords.filter(
-    (word) => word === word.split("").reverse().join("") && word.length > 2
-  );
+  const palindrome = words
+    .reverse()
+    .filter(
+      (word) => word === word.split("").reverse().join("") && word.length > 2
+    );
 
   return palindrome;
 };

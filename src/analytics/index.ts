@@ -31,13 +31,11 @@ export const getWordsTotal = (text: string): number => {
 };
 
 export const getCharactersTotal = (text: string): number => {
-  if (text.length === 0) {
+  if (isTextEmpty(text)) {
     return 0;
   }
 
-  text.trim();
-
-  const characters = text.split("");
+  const characters = text.trim().split("");
 
   return characters.length;
 };

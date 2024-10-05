@@ -184,3 +184,17 @@ export const trasformToKebabCase = (text: string): string => {
 
   return textInKebabCase;
 };
+
+export const transformToSnakeCase = (text: string): string => {
+  if (isTextEmpty(text)) {
+    return "";
+  }
+
+  const textInSnakeCase = text
+    .toLocaleLowerCase()
+    .split(/\s/)
+    .join("_")
+    .replaceAll("__", "_");
+
+  return textInSnakeCase;
+};

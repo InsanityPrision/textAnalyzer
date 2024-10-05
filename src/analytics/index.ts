@@ -72,7 +72,7 @@ export const getShortWordsList = (words: string[]): string => {
   }
 
   const joinedWords = words.join(", ");
-  debugger;
+
   return joinedWords;
 };
 

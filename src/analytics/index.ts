@@ -170,3 +170,17 @@ export const trasformToCamelCase = (text: string): string => {
 
   return textInCamelCase;
 };
+
+export const trasformToKebabCase = (text: string): string => {
+  if (isTextEmpty(text)) {
+    return "";
+  }
+
+  const textInKebabCase = text
+    .toLocaleLowerCase()
+    .split(/\s/)
+    .join("-")
+    .replaceAll("--", "-");
+
+  return textInKebabCase;
+};

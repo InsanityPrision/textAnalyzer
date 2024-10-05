@@ -40,7 +40,7 @@ export const getCharactersTotal = (text: string): number => {
   return characters.length;
 };
 
-export const getShortWordsNumberTotal = (text: string, length = 4): number => {
+export const getShortWordsTotal = (text: string, length = 4): number => {
   text.trim();
 
   if (text.length === 0) {

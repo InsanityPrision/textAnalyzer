@@ -1,6 +1,6 @@
-import { getNumberCharactersTotal } from "../index.js";
+import { getCharactersTotal } from "../index.js";
 
-let charactersNumber = getNumberCharactersTotal(`Hola que tal `);
+let charactersNumber = getCharactersTotal(`Hola que tal `);
 let expectedCharacters = 13;
 
 if (charactersNumber === expectedCharacters) {

@@ -30,7 +30,7 @@ export const getWordsTotal = (text: string): number => {
   return words.length;
 };
 
-export const getNumberCharactersTotal = (text: string): number => {
+export const getCharactersTotal = (text: string): number => {
   if (text.length === 0) {
     return 0;
   }

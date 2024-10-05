@@ -41,13 +41,11 @@ export const getCharactersTotal = (text: string): number => {
 };
 
 export const getShortWordsTotal = (text: string, length = 4): number => {
-  text.trim();
-
   if (text.length === 0) {
     return 0;
   }
 
-  const words = text.split(/\s/);
+  const words = getWords(text);
   const reducedWords = words.filter(
     (word) => word.length <= length && word.length > 0
   );

@@ -108,3 +108,21 @@ export const getWordFrequencyTotal = (
 
   return wordsFrequency.length;
 };
+
+export const getReversedWords = (text: string): string => {
+  if (isTextEmpty(text)) {
+    return "";
+  }
+
+  const words = getWords(text);
+  const reversed = words
+    .join(" ")
+    .split("")
+    .reverse()
+    .join("")
+    .split(" ")
+    .reverse()
+    .join(" ");
+
+  return reversed;
+};

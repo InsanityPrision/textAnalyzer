@@ -81,8 +81,8 @@ export const getPalindromeList = (text: string): string[] => {
     return [];
   }
 
-  const textSplited = text.split(" ");
-  const reversedWords = textSplited.reverse();
+  const words = text.split(" ");
+  const reversedWords = words.reverse();
   const palindrome = reversedWords.filter(
     (word) => word === word.split("").reverse().join("") && word.length > 2
   );

@@ -41,7 +41,7 @@ export const getCharactersTotal = (text: string): number => {
 };
 
 export const getShortWordsTotal = (text: string, length = 4): number => {
-  if (text.length === 0) {
+  if (isTextEmpty(text)) {
     return 0;
   }
 

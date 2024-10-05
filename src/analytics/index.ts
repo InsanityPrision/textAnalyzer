@@ -126,3 +126,13 @@ export const getReversedWords = (text: string): string => {
 
   return reversed;
 };
+
+export const getReversedText = (text: string): string => {
+  if (isTextEmpty(text)) {
+    return "";
+  }
+
+  const words = getWords(text).reverse().join(" ");
+
+  return words;
+};

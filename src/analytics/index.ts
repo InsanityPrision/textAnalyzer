@@ -105,6 +105,6 @@ export const getWordFrequencyTotal = (
       word.toLowerCase().replace(/[,;:.]/, "") ===
       wantedWordFrequency.toLowerCase().replace(/[,;:.]/, "")
   );
-  debugger;
+
   return wordsFrequency.length;
 };

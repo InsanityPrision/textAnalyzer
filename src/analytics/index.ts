@@ -30,14 +30,12 @@ export const getWordsTotal = (text: string): number => {
   return words.length;
 };
 
-export const getNumberCharactersTotal = (text: string): number => {
-  if (text.length === 0) {
+export const getCharactersTotal = (text: string): number => {
+  if (isTextEmpty(text)) {
     return 0;
   }
 
-  text.trim();
-
-  const characters = text.split("");
+  const characters = text.trim().split("");
 
   return characters.length;
 };

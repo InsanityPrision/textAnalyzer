@@ -95,7 +95,7 @@ export const getWordFrequencyTotal = (
   text: string,
   wantedWordFrequency: string
 ): number => {
-  if (text.length === 0) {
+  if (isTextEmpty(text)) {
     return 0;
   }
 
@@ -105,6 +105,6 @@ export const getWordFrequencyTotal = (
       word.toLowerCase().replace(/[,;:.]/, "") ===
       wantedWordFrequency.toLowerCase().replace(/[,;:.]/, "")
   );
-  debugger;
+
   return wordsFrequency.length;
 };

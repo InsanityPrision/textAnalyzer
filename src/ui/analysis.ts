@@ -1,10 +1,12 @@
-import { getParagraphsTotal } from "../analytics/index.js";
-import { getWordsTotal } from "../analytics/index.js";
-import { getCharactersTotal } from "../analytics/index.js";
-import { getShortWordsTotal } from "../analytics/index.js";
-import { getShortWordsList } from "../analytics/index.js";
-import { getShortWords } from "../analytics/index.js";
-import { getPalindromeList } from "../analytics/index.js";
+import {
+  getParagraphsTotal,
+  getWordsTotal,
+  getCharactersTotal,
+  getShortWordsTotal,
+  getShortWordsList,
+  getShortWords,
+  getPalindromeList,
+} from "../analytics/index.js";
 
 const totalsContainer = document.querySelector(".totals");
 const shortWordsContainer = document.querySelector(".short");

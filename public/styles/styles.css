@@ -38,6 +38,7 @@ h2 {
   background-color: #666;
   color: #fff;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 .container {

@@ -103,9 +103,6 @@ h2 {
   list-style-type: none;
   input:focus {
     width: 110px;
-    background-color: rgb(37, 37, 36);
-    border: 3px solid #0400ff;
-    color: #fff;
   }
 }
 
@@ -183,4 +180,10 @@ input:checked + .slider:before {
   display: block;
   line-height: 40px;
   text-decoration: none;
+}
+
+input:focus {
+  background-color: rgb(37, 37, 36);
+  border: 3px solid #0400ff;
+  color: #fff;
 }

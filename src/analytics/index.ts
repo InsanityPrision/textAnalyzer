@@ -137,17 +137,14 @@ export const getReversedText = (text: string): string => {
   return words;
 };
 
-export const hideForbiddenWords = (
-  text: string,
-  wordsList: string[]
-): string => {
+export const hideForbiddenWords = (text: string, words: string[]): string => {
   if (isTextEmpty(text)) {
     return "";
   }
 
   let hideForbiddenWords = text;
 
-  for (let word of wordsList) {
+  for (let word of words) {
     const newText = hideForbiddenWords.replaceAll(word, "****");
     hideForbiddenWords = newText;
   }

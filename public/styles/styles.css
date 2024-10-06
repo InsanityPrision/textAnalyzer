@@ -51,6 +51,14 @@ h2 {
   max-width: 100px;
 }
 
+.button:disabled {
+  background-color: #66666657;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: not-allowed;
+  max-width: 100px;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;

@@ -93,20 +93,20 @@ export const getPalindromeList = (text: string): string[] => {
 
 export const getWordFrequencyTotal = (
   text: string,
-  wantedWordFrequency: string
+  wantedWord: string
 ): number => {
   if (isTextEmpty(text)) {
     return 0;
   }
 
   const words = text.split(/\s+/g);
-  const wordsFrequency = words.filter(
+  const repeatedWords = words.filter(
     (word) =>
       word.toLowerCase().replace(/[,;:.]/, "") ===
-      wantedWordFrequency.toLowerCase().replace(/[,;:.]/, "")
+      wantedWord.toLowerCase().replace(/[,;:.]/, "")
   );
 
-  return wordsFrequency.length;
+  return repeatedWords.length;
 };
 
 export const getReversedWords = (text: string): string => {

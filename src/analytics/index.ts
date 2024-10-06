@@ -142,14 +142,16 @@ export const hideForbiddenWords = (text: string, words: string[]): string => {
     return "";
   }
 
-  let hideForbiddenWords = text;
+  let textWithoutForbiddenWords = text;
 
   for (let word of words) {
-    const newText = hideForbiddenWords.replaceAll(word, "****");
-    hideForbiddenWords = newText;
+    textWithoutForbiddenWords = textWithoutForbiddenWords.replaceAll(
+      word,
+      "****"
+    );
   }
 
-  return hideForbiddenWords;
+  return textWithoutForbiddenWords;
 };
 
 export const trasformToCamelCase = (text: string): string => {

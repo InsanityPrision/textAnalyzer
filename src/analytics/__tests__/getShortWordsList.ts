@@ -1,8 +1,8 @@
 import { getShortWordsList } from "../index.js";
 
-const wordList: string[] = [];
+const words: string[] = [];
 const expectedJoinedWords = "";
-const joinedWords = getShortWordsList(wordList);
+const joinedWords = getShortWordsList(words);
 
 if (joinedWords === expectedJoinedWords) {
   console.log("Test passed");

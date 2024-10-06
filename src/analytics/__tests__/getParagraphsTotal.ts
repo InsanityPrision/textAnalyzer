@@ -5,9 +5,9 @@ const text = `Hola
   tardes 
   que tal estas?`;
 const expectedParagraphs = 4;
-let test = getParagraphsTotal(text);
+const paragpraphsTotal = getParagraphsTotal(text);
 
-if (test === expectedParagraphs) {
+if (paragpraphsTotal === expectedParagraphs) {
   console.log("Test Passed");
 } else {
   console.log("Test Failed");

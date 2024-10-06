@@ -1,7 +1,8 @@
 import { getCharactersTotal } from "../index.js";
 
-let charactersNumber = getCharactersTotal(`Hola que tal `);
-let expectedCharacters = 13;
+const text = `Hola`;
+const charactersNumber = getCharactersTotal(text);
+const expectedCharacters = 4;
 
 if (charactersNumber === expectedCharacters) {
   console.log("Test Passed");

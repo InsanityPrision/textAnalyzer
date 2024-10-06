@@ -137,22 +137,21 @@ export const getReversedText = (text: string): string => {
   return words;
 };
 
-export const hideForbiddenWords = (
-  text: string,
-  wordsList: string[]
-): string => {
+export const hideForbiddenWords = (text: string, words: string[]): string => {
   if (isTextEmpty(text)) {
     return "";
   }
 
-  let hideForbiddenWords = text;
+  let textWithoutForbiddenWords = text;
 
-  for (let word of wordsList) {
-    const newText = hideForbiddenWords.replaceAll(word, "****");
-    hideForbiddenWords = newText;
+  for (let word of words) {
+    textWithoutForbiddenWords = textWithoutForbiddenWords.replaceAll(
+      word,
+      "****"
+    );
   }
 
-  return hideForbiddenWords;
+  return textWithoutForbiddenWords;
 };
 
 export const trasformToCamelCase = (text: string): string => {

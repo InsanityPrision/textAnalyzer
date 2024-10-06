@@ -86,7 +86,7 @@ h2 {
 
 .frequencies-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   list-style-type: none;
   input {

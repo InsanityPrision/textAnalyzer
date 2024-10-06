@@ -93,7 +93,7 @@ export const getPalindromeList = (text: string): string[] => {
 
 export const getWordFrequencyTotal = (
   text: string,
-  wantedWordFrequency: string
+  wantedWord: string
 ): number => {
   if (isTextEmpty(text)) {
     return 0;
@@ -103,7 +103,7 @@ export const getWordFrequencyTotal = (
   const wordsFrequency = words.filter(
     (word) =>
       word.toLowerCase().replace(/[,;:.]/, "") ===
-      wantedWordFrequency.toLowerCase().replace(/[,;:.]/, "")
+      wantedWord.toLowerCase().replace(/[,;:.]/, "")
   );
 
   return wordsFrequency.length;

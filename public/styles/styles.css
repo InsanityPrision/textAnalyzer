@@ -96,6 +96,16 @@ h2 {
   }
 }
 
+.frequencies-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  list-style-type: none;
+  input:focus {
+    width: 110px;
+  }
+}
+
 .camel-case-text,
 .kebab-case-text,
 .snake-case-text {
@@ -170,4 +180,10 @@ input:checked + .slider:before {
   display: block;
   line-height: 40px;
   text-decoration: none;
+}
+
+input:focus {
+  background-color: rgb(37, 37, 36);
+  border: 3px solid #0400ff;
+  color: #fff;
 }

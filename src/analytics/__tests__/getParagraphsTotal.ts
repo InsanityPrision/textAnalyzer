@@ -1,9 +1,10 @@
 import { getParagraphsTotal } from "../index.js";
 
-let test = getParagraphsTotal(`Hola 
+const text = `Hola 
   buenas 
   tardes 
-  que tal estas?`);
+  que tal estas?`;
+let test = getParagraphsTotal(text);
 
 if (test === 4) {
   console.log("Test Passed");

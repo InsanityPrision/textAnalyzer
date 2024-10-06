@@ -41,6 +41,7 @@ h2 {
   cursor: pointer;
   max-width: 100px;
   border: 1px solid black;
+  align-self: flex-end;
 }
 
 .button:hover {

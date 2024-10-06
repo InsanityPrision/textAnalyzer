@@ -100,13 +100,13 @@ export const getWordFrequencyTotal = (
   }
 
   const words = text.split(/\s+/g);
-  const wordsFrequency = words.filter(
+  const repeatedWords = words.filter(
     (word) =>
       word.toLowerCase().replace(/[,;:.]/, "") ===
       wantedWord.toLowerCase().replace(/[,;:.]/, "")
   );
 
-  return wordsFrequency.length;
+  return repeatedWords.length;
 };
 
 export const getReversedWords = (text: string): string => {
